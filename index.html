@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Virtual</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblioteca Virtual</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#sugestoes">Sugestões</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="inicio">
+            <h2>Bem-vindo à Biblioteca Virtual!</h2>
+
+            <p>
+                Descubra novos livros, explore histórias incríveis e encontre sua próxima leitura favorita.
+            </p>
+        </section>
+
+        <section id="catalogo">
+            <h2>Nosso Catálogo de Livros</h2>
+
+            <input
+                type="search"
+                id="book-search"
+                placeholder="Buscar livro pelo título..."
+            >
+
+            <p id="search-feedback"></p>
+
+            <div class="book-grid" id="book-list">
+
+                <article class="book-card">
+                    <div class="cover cover-blue">
+                        <h3>O Pequeno Príncipe</h3>
+                    </div>
+                    <p>Antoine de Saint-Exupéry</p>
+                </article>
+
+                <article class="book-card">
+                    <div class="cover cover-green">
+                        <h3>A Vida Secreta das Árvores</h3>
+                    </div>
+                    <p>Peter Wohlleben</p>
+                </article>
+
+                <article class="book-card">
+                    <div class="cover cover-orange">
+                        <h3>1984</h3>
+                    </div>
+                    <p>George Orwell</p>
+                </article>
+
+                <article class="book-card">
+                    <div class="cover cover-purple">
+                        <h3>O Homem que Calculava</h3>
+                    </div>
+                    <p>Malba Tahan</p>
+                </article>
+
+                <article class="book-card">
+                    <div class="cover cover-red">
+                        <h3>Dom Casmurro</h3>
+                    </div>
+                    <p>Machado de Assis</p>
+                </article>
+
+                <article class="book-card">
+                    <div class="cover cover-yellow">
+                        <h3>O Alquimista</h3>
+                    </div>
+                    <p>Paulo Coelho</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="sugestoes">
+            <h2>Indique um Livro!</h2>
+
+            <p>
+                Ajude a nossa biblioteca a crescer.
+                Envie sua sugestão de leitura!
+            </p>
+
+            <form id="suggestion-form" action="#" method="post">
+
+                <label for="reader-name">
+                    Nome do Leitor:
+                </label>
+
+                <input
+                    type="text"
+                    id="reader-name"
+                    name="readerName"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+                <label for="book-title">
+                    Título do Livro:
+                </label>
+
+                <input
+                    type="text"
+                    id="book-title"
+                    name="bookTitle"
+                    placeholder="Digite o título do livro"
+                    required
+                >
+
+                <button type="submit">
+                    Enviar Sugestão
+                </button>
+
+                <p id="form-message"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Desenvolvimento Web - Biblioteca Virtual.
+        </p>
+    </footer>
+
+</body>
+</html>

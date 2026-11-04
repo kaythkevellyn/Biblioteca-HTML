@@ -1,0 +1,316 @@
+/* Variaveis de cores */
+:root {
+    --cor-principal: #16866D;
+    --cor-secundaria: #202F3D;
+    --cor-fundo: #101820;
+    --cor-texto: #F1F5F9;
+    --cor-branco: #202F3D;
+    --cor-destaque: #65D6B5;
+    --cor-texto-secundario: #CBD5E1;
+    --cor-borda: #40515F;
+}
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #080F16;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #FFFFFF;
+}
+
+/* Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Conteúdo principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Parte Inicial */
+.inicio {
+    background-color: #202F3D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.inicio h2 {
+    color: var(--cor-destaque);
+    font-size: 30px;
+}
+
+.inicio p {
+    color: #E2E8F0;
+}
+
+/* Título das cores */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+}
+
+/* Campo de pesquisa */
+#book-search {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    margin: 20px auto;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #202F3D;
+    color: #FFFFFF;
+}
+
+#book-search::placeholder {
+    color: #CBD5E1;
+}
+
+#book-search:focus {
+    outline: 2px solid var(--cor-destaque);
+}
+
+/* Grade de livros */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Cartões dos livros */
+.book-card {
+    background-color: #202F3D;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card h3 {
+    color: #FFFFFF;
+}
+
+.book-card p {
+    color: #CBD5E1;
+}
+
+/* Capas dos livros */
+.cover {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.cover h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+}
+
+.cover-blue {
+    background-color: #477e9a;
+}
+
+.cover-green {
+    background-color: #376d62;
+}
+
+.cover-orange {
+    background-color: #d18b4d;
+}
+
+.cover-purple {
+    background-color: #8876a6;
+}
+
+.cover-red {
+    background-color: #a84f4d;
+}
+
+.cover-yellow {
+    background-color: #c49b43;
+}
+
+/* Seção de sugestões */
+#sugestoes {
+    background-color: #15232E;
+    padding: 35px 20px;
+    border-radius: 12px;
+}
+
+#sugestoes h2 {
+    color: var(--cor-destaque);
+}
+
+#sugestoes > p {
+    color: #E2E8F0;
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #202F3D;
+    color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    background-color: #101820;
+    color: #FFFFFF;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input::placeholder {
+    color: #CBD5E1;
+}
+
+form input:focus {
+    outline: 2px solid var(--cor-destaque);
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background-color: var(--cor-principal);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: #101820;
+}
+
+/* Mensagens */
+#search-feedback {
+    text-align: center;
+    color: #CBD5E1;
+}
+
+#form-message {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    background-color: #080F16;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inicio {
+        padding: 35px 15px;
+    }
+
+    .inicio h2 {
+        font-size: 24px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .cover {
+        min-height: 160px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
